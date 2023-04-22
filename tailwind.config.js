@@ -8,7 +8,17 @@ module.exports = {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        "trans-right": {
+          "0%, 100%": { transform: "translateX(10px)" },
+          "50%": { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        "trans-right": "trans-right 1.5s ease-in-out infinite",
+      },
+    },
     backgroundImage: {
       "style-image": "url('./assets/style-image-1.png')",
       burger: "url('./assets/burger.png')",
